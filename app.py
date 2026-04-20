@@ -18,7 +18,6 @@ st.set_page_config(
 )
 
 
-
 # Заголовок
 st.markdown('<h3 style="color: #1f77b4; font-weight: 600; margin-bottom: 8px;">🏠 California Housing Price Predictor</h3>', unsafe_allow_html=True)
 st.markdown("### Прогнозирование стоимости недвижимости с помощью ML и интерпретацией через SHAP")
@@ -54,8 +53,8 @@ st.sidebar.markdown("---")
 
 median_income = st.sidebar.slider("💰 Медианный доход района ($1000)", 0.5, 15.0, 3.5, 0.1)
 housing_median_age = st.sidebar.slider("🏗️ Возраст жилья (лет)", 1, 52, 25, 1)
-total_rooms = st.sidebar.number_input("🚪 Всего комнат", min_value=1, max_value=10000, value=1000, step=50)
-total_bedrooms = st.sidebar.number_input("🛏️ Всего спален", min_value=1, max_value=2000, value=200, step=10)
+total_rooms = st.sidebar.number_input("🚪 Всего комнат", min_value=1, max_value=50, value=1, step=1)
+total_bedrooms = st.sidebar.number_input("🛏️ Всего спален", min_value=1, max_value=50, value=1, step=1)
 population = st.sidebar.number_input("👥 Население", min_value=1, max_value=10000, value=500, step=50)
 households = st.sidebar.number_input("🏡 Домохозяйства", min_value=1, max_value=2000, value=200, step=10)
 latitude = st.sidebar.slider("📍 Широта", 32.5, 42.0, 34.0, 0.1)
